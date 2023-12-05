@@ -47,6 +47,15 @@ local plugins = {
     end,
   },
 
+  {
+    "phaazon/hop.nvim",
+    lazy = false,
+    branch = "v2",
+    config = function()
+      require("hop").setup()
+    end,
+  },
+
   -- rust
   {
     "simrat39/rust-tools.nvim",
