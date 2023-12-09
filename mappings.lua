@@ -9,7 +9,7 @@ M.general = {
     [">"] = { ">gv", "indent" },
   },
   i = {
-    -- ["kj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+    ["kj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
 }
 
@@ -24,7 +24,11 @@ M.hop = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+    ["<F5>"] = { "<cmd>DapContinue<CR>" },
+    ["<F9>"] = { "<cmd>DapToggleBreakpoint<CR>" },
+    ["<F10>"] = { "<cmd>DapStepOver<CR>" },
+    ["<F11>"] = { "<cmd>DapStepInto<CR>" },
+    ["<S-F11>"] = { "<cmd>DapStepOut<CR>" },
     ["<leader>dus"] = {
       function()
         local widgets = require "dap.ui.widgets"

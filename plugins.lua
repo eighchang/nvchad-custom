@@ -101,8 +101,11 @@ local plugins = {
   {
     "theHamsta/nvim-dap-virtual-text",
     lazy = false,
+    opts = function()
+      require("custom.configs.nvim-dap-virtual-text")
+    end,
     config = function(_, opts)
-      require("nvim-dap-virtual-text").setup()
+      require("nvim-dap-virtual-text").setup(opts)
     end,
   },
 
